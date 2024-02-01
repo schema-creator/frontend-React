@@ -1,23 +1,7 @@
-import Image from "next/image";
-import { Box, Button } from "@/lib/mui/muiRendering";
-import Header from "@/components/commons/Header";
-import useTransition from "@/hooks/useTransition";
+import React from "react";
 
-export default function Home() {
-  const { transitionPage } = useTransition();
-  return (
-    <>
-      <Header />
-      <Box>
-        <Button
-          variant='contained'
-          onClick={() => {
-            transitionPage("/projects");
-          }}
-        >
-          GetStarted
-        </Button>
-      </Box>
-    </>
-  );
-}
+const Home = () => {
+  return <div>Home</div>;
+};
+
+export default Home;
