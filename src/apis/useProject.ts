@@ -28,7 +28,6 @@ import {
 } from "@/generated/graphql";
 
 const useGetUserProjects = (userId: string) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, loading, error } = useQuery<
     GetUserProjectsQuery,
     GetUserProjectsQueryVariables
@@ -40,7 +39,6 @@ const useGetUserProjects = (userId: string) => {
 };
 
 const useGetProject = (projectId: string) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, loading, error } = useQuery<
     GetProjectQuery,
     GetProjectQueryVariables

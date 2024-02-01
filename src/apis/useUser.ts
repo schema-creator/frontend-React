@@ -34,7 +34,6 @@ export const useGetUser = (userId: string) => {
 };
 
 export const useCreateUser = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [createUser, { data, loading, error }] = useMutation<
     CreateUserMutation,
     CreateUserMutationVariables
@@ -43,7 +42,6 @@ export const useCreateUser = () => {
 };
 
 export const useUpdateUser = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [updateUser, { data, loading, error }] = useMutation<
     UpdateUserMutation,
     UpdateUserMutationVariables
@@ -52,7 +50,6 @@ export const useUpdateUser = () => {
 };
 
 export const useDeleteUser = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [deleteUser, { data, loading, error }] = useMutation<
     DeleteUserMutation,
     DeleteUserMutationVariables

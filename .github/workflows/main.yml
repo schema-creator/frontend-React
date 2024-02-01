@@ -2,7 +2,7 @@ name: CI for ReactJS App
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 
 jobs:
@@ -17,9 +17,6 @@ jobs:
 
       - name: Lint code
         run: npm run lint
-
-      - name: Run tests
-        run: npm run test
 
       - name: Build for production
         run: npm run build

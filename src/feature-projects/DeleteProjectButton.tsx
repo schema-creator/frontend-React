@@ -1,6 +1,5 @@
-import React from "react";
-import { useDeleteProject, useGetProject } from "@/apis/useProject";
-import { IconButton, DeleteOutlineOutlinedIcon } from "@/lib/mui/muiRendering";
+import { useDeleteProject } from "@/apis/useProject";
+import { Button } from "@/ui/button";
 interface Props {
   projectId: string;
 }
@@ -18,11 +17,7 @@ const DeleteProjectButton = (props: Props) => {
     }
   };
 
-  return (
-    <IconButton onClick={handleDeleteProject}>
-      <DeleteOutlineOutlinedIcon />
-    </IconButton>
-  );
+  return <Button onClick={handleDeleteProject}>Avater</Button>;
 };
 
 export default DeleteProjectButton;

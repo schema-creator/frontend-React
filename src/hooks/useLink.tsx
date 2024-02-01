@@ -1,18 +1,13 @@
-import React from "react";
 import { useCreateInviteLink } from "@/apis/useLinkServices";
 import { Auth } from "@/generated/graphql";
 import { useState } from "react";
 import clipboardCopy from "clipboard-copy";
-import { useRouter } from "next/router";
 
 const useLink = () => {
   const { createInviteLink, data } = useCreateInviteLink();
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null as HTMLButtonElement | null);
   const [pullValue, setPullValue] = useState<Auth>(Auth.Owner);
   const open = Boolean(anchorEl);
-  const router = useRouter();
-  const pageId = router.query.id as string;
-
   const CreateLink = async (id: string, authority: Auth) => {
     if (id && authority) {
       await createInviteLink({
@@ -30,7 +25,7 @@ const useLink = () => {
 
   const MenuItemClick = async (value: Auth) => {
     setPullValue(value);
-    await CreateLink(pageId, pullValue);
+    // await CreateLink(pageId, pullValue);
     const link = data?.createInviteLink;
     if (link) {
       await CopyLink(link);
@@ -41,8 +36,12 @@ const useLink = () => {
     handleClose();
   };
 
-  const handleClick = (event: any) => {
-    setAnchorEl(event.currentTarget);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Remove the unused variable 'target'
+    const target = event.currentTarget;
+    if (target) {
+      setAnchorEl(target);
+    }
   };
   const handleClose = () => {
     setAnchorEl(null);
