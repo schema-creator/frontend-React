@@ -1,4 +1,3 @@
-import React from "react";
 import { useCreateInviteLink } from "@/apis/useLinkServices";
 import { Auth } from "@/generated/graphql";
 import { useState } from "react";
