@@ -1,0 +1,29 @@
+name: CI for ReactJS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build for production
+        run: npm run build
+
+      # Add additional steps for deployment here (e.g., deploy to Vercel, Netlify)
+
+      # Optionally, add steps for caching dependencies for faster builds
