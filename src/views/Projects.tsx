@@ -1,9 +1,9 @@
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import Header from "@/components/commons/Header";
-import ProjectCardList from "@/components/projects/ProjectCardList";
-import CreateProjectModal from "@/components/projects/CreateProjectModal";
-import { Box, Typography } from "@/lib/mui/muiRendering";
-import CreateMemberModal from "@/components/members/CreateMemberModal";
+import ProjectCardList from "@/components/ProjectCardList";
+import CreateProjectModal from "@/components/CreateProjectModal";
+import CreateMemberModal from "@/";
 
 const Index = () => {
   return (

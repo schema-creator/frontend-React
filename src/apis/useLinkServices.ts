@@ -5,7 +5,7 @@ import {
   CreateInviteLinkMutationVariables,
 } from "../generated/graphql";
 
-export const useCreateInviteLink = () => {
+const useCreateInviteLink = () => {
   const [createInviteLink, { data, loading, error }] = useMutation<
     CreateInviteLinkMutation,
     CreateInviteLinkMutationVariables
@@ -13,3 +13,5 @@ export const useCreateInviteLink = () => {
 
   return { createInviteLink, data, loading, error };
 };
+
+export { useCreateInviteLink };

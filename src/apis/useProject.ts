@@ -27,7 +27,7 @@ import {
   DeleteProjectMutationVariables,
 } from "@/generated/graphql";
 
-export const useGetUserProjects = (userId: string) => {
+const useGetUserProjects = (userId: string) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, loading, error } = useQuery<
     GetUserProjectsQuery,
@@ -39,7 +39,7 @@ export const useGetUserProjects = (userId: string) => {
   return { data, loading, error };
 };
 
-export const useGetProject = (projectId: string) => {
+const useGetProject = (projectId: string) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, loading, error } = useQuery<
     GetProjectQuery,
@@ -50,7 +50,7 @@ export const useGetProject = (projectId: string) => {
 
   return { data, loading, error };
 };
-export const useCreateProject = () => {
+const useCreateProject = () => {
   const [createProject, { data, loading, error }] = useMutation<
     CreateProjectMutation,
     CreateProjectMutationVariables
@@ -59,7 +59,7 @@ export const useCreateProject = () => {
   return { createProject, data, loading, error };
 };
 
-export const useUpdateProject = () => {
+const useUpdateProject = () => {
   const [updateProject, { data, loading, error }] = useMutation<
     UpdateProjectMutation,
     UpdateProjectMutationVariables
@@ -68,11 +68,19 @@ export const useUpdateProject = () => {
   return { updateProject, data, loading, error };
 };
 
-export const useDeleteProject = () => {
+const useDeleteProject = () => {
   const [deleteProject, { data, loading, error }] = useMutation<
     DeleteProjectMutation,
     DeleteProjectMutationVariables
   >(DeleteProjectDocument);
 
   return { deleteProject, data, loading, error };
+};
+
+export {
+  useGetUserProjects,
+  useCreateProject,
+  useGetProject,
+  useUpdateProject,
+  useDeleteProject,
 };
