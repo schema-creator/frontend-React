@@ -29,7 +29,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
     "reactflow": "^11.10.1",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
