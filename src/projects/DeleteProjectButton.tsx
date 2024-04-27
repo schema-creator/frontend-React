@@ -1,5 +1,5 @@
 import { useDeleteProject } from "@/apis/useProject";
-import { Button } from "@/ui/button";
+
 interface Props {
   projectId: string;
 }
@@ -17,7 +17,7 @@ const DeleteProjectButton = (props: Props) => {
     }
   };
 
-  return <Button onClick={handleDeleteProject}>Avater</Button>;
+  return <button onClick={handleDeleteProject}>Avater</button>;
 };
 
 export default DeleteProjectButton;
