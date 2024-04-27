@@ -24,6 +24,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"], // ここに移動
+  "include": ["src", "projects"], // ここに移動
   "references": [{ "path": "./tsconfig.node.json" }] // ここに移動
 }
